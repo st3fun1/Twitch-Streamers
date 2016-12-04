@@ -1,0 +1,221 @@
+/*GENERAL*/
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+/*LAYOUT */
+body {
+    background-color:#19171C;
+    position: relative;
+}
+
+#online row {
+    position: relative;
+}
+
+#online channel:after{
+    content:'';
+    display:block;
+    width:30px;
+    height:30px;
+    position: absolute;
+    color:red;
+}
+
+.row.vertical-align {
+        display: flex;
+        align-items: center;
+}
+
+/*MAIN */
+h1.title {
+    color:white;
+    box-shadow:0.2em 0.2em 1em #926EA5,-0.2em -0.2em 1em #926EA5;
+    -webkit-box-shadow:0.2em 0.2em 1em #926EA5,-0.2em -0.2em 1em #926EA5;
+    text-shadow: 0.2em 0.2em 1em purple ,-0.2em -0.2em 1em purple;
+    background-color:darkgrey;
+    height: 3em;
+    margin-top:0.3em;
+    -webkit-text-shadow: 0.2em 0.2em 1em purple,-0.2em -0.2em 1em purple;
+}
+
+.title > span {
+    height:50%;
+    position: relative;
+    top:30%;
+
+}
+
+
+
+/* CHANNEL DIV */
+
+.channel {
+    color:#926EA5;
+    border-radius:0.3em;
+    padding: 1em;
+    margin-bottom:0.5em;
+    background-color:#FFFFFF;
+}
+
+.logo-image {
+    border-radius:50%;
+    width:4em;
+    border:0.2em solid purple;
+    height:4em;
+}
+
+.status:first-child {
+    color:purple;
+    font-weight: 600;
+}
+
+
+
+/* MENU */
+
+#menu li {
+    list-style-type: none;
+    height:4em;
+    position: relative;
+    background-color:#57286F;
+    color:white;
+    text-align: center;
+    transition: 0.4s all ease;
+    padding-top:1em;
+    border:0.3em solid white;
+}
+
+#menu li:hover {
+    cursor: pointer;
+}
+
+#menu li.selected {
+    background-color:#3B1051;
+    font-weight: solid;
+}
+#menu li.selected:after{
+    content:'';
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid white;
+    width: 0;
+    height: 0;
+    bottom:-15px;
+    margin-left:-15px;
+    position: absolute;
+    left:50%;
+}
+
+#menu {
+    margin-top:3em;
+    margin-bottom:2em;
+}
+
+#menu i {
+    margin-right:0.1875em;
+}
+
+.selected {
+    background-color:red;
+    color:white;
+}
+
+
+/* Twitch player */
+
+.stream-player{
+    height: 30em;
+    width:100%;
+    border:2px solid #3B1051;
+}
+
+.show-player {
+    display: block;
+    margin: 0 auto;
+    border-radius:2px;
+}
+
+
+
+
+/* SEARCH AREA */
+
+.search-area {
+    margin: 2em 0;
+}
+
+.search-box {
+    width:30%;
+    height:2em;
+    padding:1em;
+    font-size:1.2em;
+    font-weight:bold;
+    border-radius:0.3em;
+    transition:0.8s width ease;
+}
+.search-box:focus{
+    width:75%;
+    color:mediumpurple;
+}
+
+/* Back to top button */
+
+.back-to-top{
+    position: absolute;
+    transition:0.4s all;
+    bottom:4em;
+    right:2em;
+    text-decoration: none;
+    color:mediumpurple;
+    border:3px solid mediumpurple;
+    border-radius:6px;
+    font-size:15px;
+    padding:0.5em;
+}
+
+.back-to-top:hover{
+    color:white;
+    border-color:white;
+}
+
+/*Footer */
+
+.footer {
+    min-height:3em;
+    box-shadow:0 -0.2em 1em #926EA5;
+    -webkit-box-shadow:0 -0.2em 1em #926EA5;
+    background-color:darkgrey;
+    margin-top:1em;
+    position: relative;
+    bottom:0.4em;
+}
+
+.footer  small {
+    color:white;
+    font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width:500px){
+    ul li {
+        display:block;
+    }
+    
+    ul li.selected:after{
+        content:none;
+        display:none;
+    }
+    
+    .stream-player {
+        height: 20em;
+    }
+    
+    .back-to-top{
+        right:0.3em;
+        bottom:0.3em;
+    }
+}
+
